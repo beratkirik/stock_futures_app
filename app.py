@@ -14,10 +14,6 @@ def FuturePrice(spotPrice, benefit, cost, r, t):
     return (spotPrice - benefit + cost)*math.pow(1 + r, t);
 
 # Sidebar for user input
-
-st.dataframe(df.style.format(subset=['Position', 'Marks'], formatter="{:.2f}"));
-
-
 symbol = st.sidebar.text_input("Enter Stock Symbol", "GARAN");
 benefit = st.sidebar.number_input("Dividend", value=0.0);
 miscCharges = st.sidebar.number_input("Cost", value=0.0);
