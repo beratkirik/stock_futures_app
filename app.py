@@ -24,7 +24,7 @@ r = st.sidebar.number_input("Vadeye Kalan Gün Sayısı", value=0.40);
 spotPrice = st.sidebar.number_input("Enter Stock Price", value=0.0)
 ratePerday      = r/365;
 
-contractPrice   = FuturePrice(spotPrice, benefit, miscCharges, r, t);
+contractPrice   = FuturePrice(spotPrice, benefit, miscCharges, ratePerday, t);
 
 # Display results
 st.write(f"Stock Price: ${spotPrice}")
