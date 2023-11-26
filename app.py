@@ -15,15 +15,15 @@ def FuturePrice(spotPrice, benefit, cost, r, t):
 
 # Sidebar for user input
 
-st.dataframe(df.style.format(subset=['Position', 'Marks'], formatter="{:.2f}"
+st.dataframe(df.style.format(subset=['Position', 'Marks'], formatter="{:.2f}");
 
 
-symbol = st.sidebar.text_input("Enter Stock Symbol", "GARAN")
-benefit = st.sidebar.number_input("Dividend", value=0.0)
+symbol = st.sidebar.text_input("Enter Stock Symbol", "GARAN");
+benefit = st.sidebar.number_input("Dividend", value=0.0);
 miscCharges = st.sidebar.number_input("Cost", value=0.0);
-t = st.sidebar.number_input("Vadeye Kalan Gün Sayısı", value=0.0)
+t = st.sidebar.number_input("Vadeye Kalan Gün Sayısı", value=0.0);
 r = st.sidebar.number_input("Vadeye Kalan Gün Sayısı", value=0.40);
-spotPrice = st.sidebar.number_input("Enter Stock Price", value=0.0)
+spotPrice = st.sidebar.number_input("Enter Stock Price", value=0.0);
 ratePerday      = r/365;
 
 contractPrice   = FuturePrice(spotPrice, benefit, miscCharges, ratePerday, t);
