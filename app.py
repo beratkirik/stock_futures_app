@@ -27,5 +27,5 @@ ratePerday      = r/365;
 contractPrice   = FuturePrice(spotPrice, benefit, miscCharges, r, t);
 
 # Display results
-st.write(f"Stock Price: ${stock_price}")
+st.write(f"Stock Price: ${spotPrice}")
 st.write(f"Futures Price: ${contractPrice}")
