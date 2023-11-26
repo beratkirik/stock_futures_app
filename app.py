@@ -1,6 +1,6 @@
 # Import necessary libraries
 import streamlit as st
-import yfinance as yf
+
 
 # Page configuration
 st.set_page_config(page_title="Stock Futures Pricing App", page_icon="📈")
@@ -15,8 +15,8 @@ strike_price = st.sidebar.number_input("Enter Strike Price", value=0.0)
 option_type = st.sidebar.radio("Select Option Type", ("Call", "Put"))
 
 # Fetch stock data
-stock_data = yf.Ticker(symbol)
-stock_price = stock_data.history(period='1d')['Close'][0]
+stock_data = st.sidebar.number_input("Enter Stock Date", value=0.0)
+stock_price = st.sidebar.number_input("Enter Stock Price", value=0.0)
 
 # Calculate option price (you may need a more sophisticated pricing model)
 if option_type == "Call":
