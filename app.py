@@ -15,7 +15,7 @@ def FuturePrice(spotPrice, benefit, cost, r, t):
 
 # Sidebar for user input
 
-st.dataframe(df.style.format(subset=['Position', 'Marks'], formatter="{:.2f}");
+st.dataframe(df.style.format(subset=['Position', 'Marks'], formatter="{:.2f}"));
 
 
 symbol = st.sidebar.text_input("Enter Stock Symbol", "GARAN");
